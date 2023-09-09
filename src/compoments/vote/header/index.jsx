@@ -1,10 +1,10 @@
 import React from "react";
-import './header.moudle.css'
+import styles from './header.module.css'
 const Header = (() => {
     return (
-        <div className="top">
-            <img src="../public/photo/name.png" className="name" srcset="" />
-            <h3 className="title">支 教 保 研 投 票 系 统</h3>
+        <div className={styles.top}>
+            <img src="../public/photo/name.png" className={styles.name} srcset="" />
+            <h3 className={styles.title}>支 教 保 研 投 票 系 统</h3>
         </div>
     )
 })

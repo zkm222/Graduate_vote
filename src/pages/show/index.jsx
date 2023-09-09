@@ -6,7 +6,7 @@ const Show = (() => {
         <div>
             <Header></Header>
             <Totalcount></Totalcount>
-            {/* <Result></Result> */}
+            <Result></Result>
         </div>
     )
 })

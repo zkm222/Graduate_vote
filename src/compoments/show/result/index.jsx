@@ -1,7 +1,7 @@
 import React from "react"
 import { Checkbox } from 'antd'
-import Submit from '../../vote/button';
-import './result.moudle.css'
+import Revote from '../button';
+import styles from './result.module.css'
 
 var student = [
     { "rank": "1", "id": "11", "sex": "女", "vote": "8", "identity": "预备党员", "name": '赵梓欣', "school": "心理学院" },
@@ -20,17 +20,17 @@ var student = [
 
 const Result = (() => {
     return (
-        <div>
+        <div className={styles.result}>
             <table>
                 <tr>
-                    <th style={{ WebkitBorderTopLeftRadius: 15 }}>再次投票选择</th>
+                    <th style={{ WebkitBorderTopLeftRadius: 15 }}>选择再次投票</th>
                     <th>排名</th>
                     <th>序号</th>
                     <th>姓名</th>
                     <th>性别</th>
                     <th>政治面貌</th>
-                    <th style={{ WebkitBorderTopRightRadius: 15 }}>学院</th>
-                    <th>票数</th>
+                    <th>学院</th>
+                    <th style={{ WebkitBorderTopRightRadius: 15 }}>票数</th>
                 </tr>
                 {student.map(item => {
                     return (
@@ -62,7 +62,7 @@ const Result = (() => {
                         </tr>
                     )
                 })}
-                <Submit></Submit>
+                <Revote></Revote>
             </table>
         </div>
     )
