@@ -58,7 +58,7 @@ class Form extends Component {
   render() {
     return (
       <div>
-        <h1 className='toptitle'>研 究 生 投 票 系 统</h1>
+        <h1 className={styles.toptitle}>候 选 人 名 单</h1>
         <div className={styles.limit}>每人限投 <span className={styles.limitmark}>{checkLimit}</span> 票</div>
         {/* 表头 */}
         <table>

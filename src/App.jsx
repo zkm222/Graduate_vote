@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Show from './pages/show'
 import Vote from './pages/vote'
+import Waiting from './pages/waiting'
 import { Routes, Route, Link, useParams, useLocation, Navigate } from "react-router-dom"
 function App() {
   return (
