@@ -21,6 +21,7 @@ var student = [
 const Result = (() => {
     return (
         <div className={styles.result}>
+            <h1 className={styles.toptitle}>当 前 排 名</h1>
             <table>
                 <tr>
                     <th style={{ WebkitBorderTopLeftRadius: 15 }}>选择再次投票</th>
