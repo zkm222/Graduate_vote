@@ -10,8 +10,9 @@ function App() {
     <div>
       <Routes>
         <Route path='/' element={<Navigate to='/vote' />} />
-        <Route path='/vote' element={<Vote/>}></Route>
-        <Route path='/show' element={<Show/>} />
+        <Route path='/vote' element={<Vote />} />
+        <Route path='/show' element={<Show />} />
+        <Route path='/waiting' element={<Waiting />} />
       </Routes>
     </div>
   )

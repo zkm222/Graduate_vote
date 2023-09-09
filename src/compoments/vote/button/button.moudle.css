@@ -1,4 +1,4 @@
-.submitContainer{
+.submitContainer {
     width: 20%;
     position: absolute;
     left: 50%;
@@ -6,7 +6,8 @@
     margin-top: 30px;
     /* top: 50px; */
 }
-.submit{
+
+.submit {
     font-size: larger;
     font-weight: 900;
     background-color: #0464a9;

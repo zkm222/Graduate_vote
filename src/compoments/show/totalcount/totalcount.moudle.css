@@ -1,0 +1,12 @@
+.total{
+    position: absolute;
+    top: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2em;
+    font-weight: 800;
+}
+
+.count{
+    color: #e04e4e;
+}
