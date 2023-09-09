@@ -10,7 +10,7 @@ function App() {
     <div>
       <Routes>
         <Route path='/' element={<Navigate to='/vote' />} />
-        <Route path='/vote' element={<Vote />}></Route>
+        <Route path='/vote' element={<Vote/>}></Route>
         <Route path='/show' element={<Show/>} />
       </Routes>
     </div>
