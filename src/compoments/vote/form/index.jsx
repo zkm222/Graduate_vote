@@ -104,7 +104,6 @@ class Form extends Component {
             if(item.voteGender==0){
               sex='女'
             }
-            console.log(index)
             return (
               <tr className={styles.student}>
                 <td>
@@ -128,7 +127,7 @@ class Form extends Component {
               </tr>
             )
           })}
-          <Submit></Submit>
+          <Submit check={this.state.checked_num} list={this.state.student_list} limit={checkLimit}></Submit>
         </table>
 
       </div>
