@@ -25,22 +25,6 @@ class Form extends Component {
     ]
   }
   componentDidMount(){
-    // // 设置投票限制人数
-    // axios({
-    //   method:'post',//请求方式
-    //   url:'http://43.140.197.15:8080/admin/setMsg',//请求地址
-    //   params:'',//和url一起发送的数据（如get请求）
-    //   data:JSON.stringify({limit:5,teachers:10,students:5}),//必要参数，
-    //   // 自定义请求头
-    //   headers: {'Content-Type':'application/json'},
-    // }).then(
-    //   res=>{
-    //     console.log(res)
-    //     // this.setState({
-    //     //   data:res.data.data
-    //     // })
-    //   }
-    // )
     axios.get('http://43.140.197.15:8080/users').then(res=>{
       console.log(res.data.data.students,"====")
       checkLimit=res.data.data.limit
