@@ -3,7 +3,6 @@ import { Checkbox } from 'antd'
 import Submit from '../button';
 import styles from './form.module.css'
 import axios from 'axios'
-
 var checkLimit = 3;
 
 class Form extends Component {
@@ -26,7 +25,7 @@ class Form extends Component {
     ]
   }
   componentDidMount(){
-    //设置投票限制人数
+    // // 设置投票限制人数
     // axios({
     //   method:'post',//请求方式
     //   url:'http://43.140.197.15:8080/admin/setMsg',//请求地址
@@ -67,7 +66,7 @@ class Form extends Component {
         }
       }, () => { console.log(this.state.student_list) })
     } else if (this.state.checked_num >=checkLimit) {
-      console.log("选人到达上限")
+      alert("选人到达上限")
       e.target.checked = false
     } else {
       this.choose(q)

@@ -31,6 +31,25 @@ class Result extends Component{
                     student:res.data.data.students
                 })
             })
+        setInterval(() => {
+            axios({
+                method:'post',//请求方式
+                url:'http://43.140.197.15:8080/admin/getVoteResult',//请求地址
+                params:'',//和url一起发送的数据（如get请求）
+                data:'',//必要参数，
+                // 自定义请求头
+                }).then(
+                res=>{
+                     if(res.data.msg == 'success'){
+                     }
+                     else{
+                        console.log('failed')
+                     }
+                    this.setState({
+                        student:res.data.data.students
+                    })
+                })
+        }, 5000);
     }
     render(){
         var i = 0

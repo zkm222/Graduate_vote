@@ -27,6 +27,25 @@ componentDidMount(){
             })
             console.log(this.state.teachersNum)
         })
+        setInterval(() => {
+            axios({
+                method:'post',//请求方式
+                url:'http://43.140.197.15:8080/admin/getVoteResult',//请求地址
+                params:'',//和url一起发送的数据（如get请求）
+                data:'',//必要参数，
+                // 自定义请求头
+                }).then(
+                res=>{
+                     if(res.data.msg == 'success'){
+                     }
+                     else{
+                        console.log('failed')
+                     }
+                    this.setState({
+                        teachersNum:res.data.data.teachersNum
+                    })
+                })
+        }, 5000);
 }
 render(){
     return (

@@ -2,7 +2,9 @@ import React from "react"
 import { Button } from 'antd'
 import styles from './button.module.css'
 import axios from "axios"
+import { Routes, Route, Link ,useParams,useLocation,useNavigate} from "react-router-dom";
 const Submit = ((props) => {
+    const navigate=useNavigate()
     const sentResult=()=>{
         if(props.check!=props.limit){
             alert(`每人需要投${props.limit}票`)
@@ -18,6 +20,7 @@ const Submit = ((props) => {
                 }).then(
                 res=>{
                     console.log(res)
+                    navigate("/waiting",{replace:true})
                 }
                 )
             }
