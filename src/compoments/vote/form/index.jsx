@@ -132,7 +132,7 @@ class Form extends Component {
           <div className={styles.blank}></div>
         </table>  
       </div>
-      <Footer limit={checkLimit} checked={this.state.checked_num}></Footer>
+      <Footer limit={checkLimit} checked={this.state.checked_num} list={this.state.student_list}></Footer>
     </div>
     );
   }
