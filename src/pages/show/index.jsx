@@ -1,12 +1,14 @@
 import Header from "../../compoments/vote/header"
-import Totalcount from "../../compoments/show/totalcount"
+
 import Result from "../../compoments/show/result"
+import Footresult from "../../compoments/show/footer"
 const Show = (() => {
     return (
         <div>
             <Header></Header>
-            <Totalcount></Totalcount>
+            
             <Result></Result>
+            <Footresult></Footresult>
         </div>
     )
 })

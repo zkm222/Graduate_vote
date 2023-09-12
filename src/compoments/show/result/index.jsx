@@ -97,8 +97,10 @@ class Result extends Component{
                             </tr>
                         )
                     })}
-                    <Revote></Revote>
+                    {/* <Revote></Revote> */}
+                    <div className={styles.blank}></div>
                 </table>
+                
             </div>
         )
     }

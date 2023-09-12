@@ -1,10 +1,11 @@
 .total{
-    position: absolute;
-    top: 150px;
+    position: fixed;
+    bottom: 18px;
     left: 50%;
     transform: translateX(-50%);
     font-size: 2em;
     font-weight: 800;
+    z-index: 99;
 }
 
 .count{
