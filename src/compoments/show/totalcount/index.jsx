@@ -4,7 +4,7 @@ import { Component } from 'react';
 import axios from "axios";
 class Totalcount extends Component{
 state={
-    teachersNum:'',
+    teachersNum:'2',
     teachersAll:'10'
 }
 
@@ -23,7 +23,8 @@ componentDidMount(){
                 console.log('failed')
              }
             this.setState({
-                teachersNum:res.data.data.teachersNum
+                teachersNum:res.data.data.teachersNum,
+                teachersAll:res.date.date.teachersAll
             })
             console.log(this.state.teachersNum)
         })
@@ -42,7 +43,8 @@ componentDidMount(){
                         console.log('failed')
                      }
                     this.setState({
-                        teachersNum:res.data.data.teachersNum
+                        teachersNum:res.data.data.teachersNum,
+                        teachersAll:res.date.date.teachersAll
                     })
                 })
         }, 5000);

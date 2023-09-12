@@ -10,7 +10,7 @@ import { Component } from 'react';
 class Result extends Component{
     state={
          student:[
-            {voteId: 2, voteName: 'lisi', voteGender: 0, votePoli: 'test', voteInsti: 'test',votePoll:5}
+            {voteId: 2, voteName: 'lisi', voteGender: 0, votePoli: 'test', voteInsti: 'test',votePoll:5,voteInstiBy:'1',voteMeetingBy:'2'}
         ]
     }
     componentDidMount(){
@@ -57,12 +57,14 @@ class Result extends Component{
             <div className={styles.result}>
                 <table>
                     <tr>
-                        <th style={{ WebkitBorderTopLeftRadius: 15 }}>选择再次投票</th>
-                        <th>排名</th>
+                        {/* <th>选择再次投票</th> */}
+                        <th style={{ WebkitBorderTopLeftRadius: 15 }}>排名</th>
+                        <th>学院</th>
                         <th>姓名</th>
                         <th>性别</th>
                         <th>政治面貌</th>
-                        <th>学院</th>
+                        <th>学院排序</th>
+                        <th>面试排序</th>
                         <th style={{ WebkitBorderTopRightRadius: 15 }}>票数</th>
                     </tr>
                     {this.state.student.map(item => {
@@ -73,11 +75,14 @@ class Result extends Component{
                         }
                         return (
                             <tr className={styles.student}>
-                                <td>
+                                {/* <td>
                                     <input type='checkbox' name='student' key={item.id} data-id={item.id} />
-                                </td>
+                                </td> */}
                                 <td>
                                     <span className={styles.message}>{i} </span>
+                                </td>
+                                <td>
+                                    <span className={styles.message}>{item.voteInsti} </span>
                                 </td>
                                 <td>
                                     <span className={styles.message}>{item.voteName} </span>
@@ -89,7 +94,10 @@ class Result extends Component{
                                     <span className={styles.message}>{item.votePoli} </span>
                                 </td>
                                 <td>
-                                    <span className={styles.message}>{item.voteInsti} </span>
+                                    <span className={styles.message}>{item.voteInstiBy} </span>
+                                </td>
+                                <td>
+                                    <span className={styles.message}>{item.voteMeetingBy} </span>
                                 </td>
                                 <td>
                                     <span className={styles.message}>{item.votePoll} </span>
