@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Drawer } from 'antd'
 import styles from './form.module.css'
 import axios from 'axios'
+import Footer from '../footer';
 var checkLimit = 3;
 
 class Form extends Component {
@@ -23,51 +24,52 @@ class Form extends Component {
       { "id": "12", "sex": "女", "identity": "共青团员", "name": '杨笑雨', "school": "外国语学院" }
     ]
   }
-  // componentDidMount(){
-  //   axios.get('http://43.140.197.15:8080/users').then(res=>{
-  //     console.log(res.data.data.students,"====")
-  //     checkLimit=res.data.data.limit
-  //     console.log(checkLimit)
-  //     this.setState((state) => {
-  //       return {
-  //         students:res.data.data.students
-  //       }
-  //     }, () => { console.log(this.state.students) })
-  //   })
-  // }
-  // checked_num = e => {
-  //   const q = e.target
-  //   if (e.target.checked == false) {
-  //     console.log(1)
-  //     let list = this.state.student_list
-  //     let value = e.target.dataset.id
-  //     list.splice(list.indexOf(value), 1)
-  //     this.setState((state) => {
-  //       return {
-  //         student_list: list,
-  //         checked_num: state.checked_num - 1
-  //       }
-  //     }, () => { console.log(this.state.student_list) })
-  //   } else if (this.state.checked_num >=checkLimit) {
-  //     alert("选人到达上限")
-  //     e.target.checked = false
-  //   } else {
-  //     this.choose(q)
-  //   }
-  // }
-  // choose = q => {
-  //   let list = this.state.student_list
-  //   console.log(this.state.checked_num)
-  //   list.push(q.dataset.id)
-  //   this.setState((state) => {
-  //     return {
-  //       student_list: list,
-  //       checked_num: state.checked_num + 1
-  //     }
-  //   }, () => { console.log(this.state.student_list) })
-  // }
+  componentDidMount(){
+    axios.get('http://43.140.197.15:8080/users').then(res=>{
+      console.log(res.data.data.students,"====")
+      checkLimit=res.data.data.limit
+      console.log(checkLimit)
+      this.setState((state) => {
+        return {
+          students:res.data.data.students
+        }
+      }, () => { console.log(this.state.students) })
+    })
+  }
+  checked_num = e => {
+    const q = e.target
+    if (e.target.checked == false) {
+      console.log(1)
+      let list = this.state.student_list
+      let value = e.target.dataset.id
+      list.splice(list.indexOf(value), 1)
+      this.setState((state) => {
+        return {
+          student_list: list,
+          checked_num: state.checked_num - 1
+        }
+      }, () => { console.log(this.state.student_list) })
+    } else if (this.state.checked_num >=checkLimit) {
+      alert("选人到达上限")
+      e.target.checked = false
+    } else {
+      this.choose(q)
+    }
+  }
+  choose = q => {
+    let list = this.state.student_list
+    console.log(this.state.checked_num)
+    list.push(q.dataset.id)
+    this.setState((state) => {
+      return {
+        student_list: list,
+        checked_num: state.checked_num + 1
+      }
+    }, () => { console.log(this.state.student_list) })
+  }
   render() {
     return (
+    <div>
       <div className={styles.form}>
         {/* <h1 className={styles.toptitle}>候 选 人 名 单</h1> */}
         {/* <div className={styles.limit}>每人限投 <span className={styles.limitmark}>{checkLimit}</span> 票</div> */}
@@ -128,9 +130,10 @@ class Form extends Component {
             )
           })}
           <div className={styles.blank}></div>
-        </table>
-
+        </table>  
       </div>
+      <Footer limit={checkLimit} checked={this.state.checked_num}></Footer>
+    </div>
     );
   }
 }
