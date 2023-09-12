@@ -10,7 +10,7 @@ import { Component } from 'react';
 class Result extends Component{
     state={
          student:[
-            {voteId: 2, voteName: 'lisi', voteGender: 0, votePoli: 'test', voteInsti: 'test',votePoll:5,voteInstiBy:'1',voteMeetingBy:'2'}
+            {voteId: 2, voteName: 'lisi', voteGender: 0, votePoli: 'test', voteInsti: 'test',votePoll:5,vote_insti_sort:'1',vote_inter_sort:'2'}
         ]
     }
     componentDidMount(){
@@ -94,10 +94,10 @@ class Result extends Component{
                                     <span className={styles.message}>{item.votePoli} </span>
                                 </td>
                                 <td>
-                                    <span className={styles.message}>{item.voteInstiBy} </span>
+                                    <span className={styles.message}>{item.vote_insti_sort} </span>
                                 </td>
                                 <td>
-                                    <span className={styles.message}>{item.voteMeetingBy} </span>
+                                    <span className={styles.message}>{item.vote_inter_sort} </span>
                                 </td>
                                 <td>
                                     <span className={styles.message}>{item.votePoll} </span>
