@@ -22,9 +22,10 @@ componentDidMount(){
              else{
                 console.log('failed')
              }
+             console.log(res)
             this.setState({
                 teachersNum:res.data.data.teachersNum,
-                teachersAll:res.date.date.teachersAll
+                teachersAll:res.data.data.teachers_all
             })
             console.log(this.state.teachersNum)
         })
@@ -44,7 +45,7 @@ componentDidMount(){
                      }
                     this.setState({
                         teachersNum:res.data.data.teachersNum,
-                        teachersAll:res.date.date.teachersAll
+                        teachersAll:res.data.data.teachers_all
                     })
                 })
         }, 5000);
