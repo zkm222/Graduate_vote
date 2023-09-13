@@ -27,9 +27,8 @@ const Waiting= (()=>{
                 // 自定义请求头
                 }).then(
                 res=>{
-                    console.log(res.data.data.revote)
-                     let length=res.data.data.revote.length
-                    if(res.data.data.teachersNum==0&&length!=0){
+                    
+                    if(res.data.data.isRevote==1){
                         console.log("qwq")
                         navigate("/vote",{replace:true})
                     }
