@@ -28,7 +28,7 @@ const Waiting= (()=>{
                 }).then(
                 res=>{
                     
-                    if(res.data.data.isRevote==1){
+                    if(res.data.data.isRevote!=0){
                         console.log("qwq")
                         navigate("/vote",{replace:true})
                     }
