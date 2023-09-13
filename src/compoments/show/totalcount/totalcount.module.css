@@ -3,7 +3,7 @@
     bottom: 18px;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 1.5em;
+    font-size: 2em;
     font-weight: 800;
     z-index: 99;
 }
