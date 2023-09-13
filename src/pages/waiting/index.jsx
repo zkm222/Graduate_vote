@@ -27,8 +27,8 @@ const Waiting= (()=>{
                 // 自定义请求头
                 }).then(
                 res=>{
-                    
-                    if(res.data.data.isRevote!=0){
+                    console.log(res.data.data)
+                    if(res.data.data.isRevote!=0&&res.data.data.teachersNum==0){
                         console.log("qwq")
                         navigate("/vote",{replace:true})
                     }
