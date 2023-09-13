@@ -110,6 +110,9 @@ class Form extends Component {
                   <span className={styles.message}>{index+1} </span>
                 </td>
                 <td>
+                  <span className={styles.message}> {item.voteInsti}</span>
+                </td>
+                <td>
                   <span className={styles.message}>{item.voteName} </span>
                 </td>
                 <td>
@@ -119,10 +122,11 @@ class Form extends Component {
                   <span className={styles.message}>{item.votePoli} </span>
                 </td>
                 <td>
-                  <span className={styles.message}> {item.voteInsti}</span>
+                  <span className={styles.message}>{item.voteInstiSort} </span>
                 </td>
-                <td></td>
-                <td></td>
+                <td>
+                  <span className={styles.message}>{item.voteInterSort} </span>
+                </td>
                 <td>
                   <input type='checkbox' name='student' key={item.voteId} onClick={this.checked_num} data-id={item.voteId} />
                 </td>
