@@ -24,7 +24,7 @@ componentDidMount(){
              }
              console.log(res)
             this.setState({
-                teachersNum:res.data.data.teachersNum,
+                teachersNum:res.data.data.teachers_all-res.data.data.teachersNum,
                 teachersAll:res.data.data.teachers_all
             })
             console.log(this.state.teachersNum)
@@ -44,7 +44,7 @@ componentDidMount(){
                         console.log('failed')
                      }
                     this.setState({
-                        teachersNum:res.data.data.teachersNum,
+                        teachersNum:res.data.data.teachers_all-res.data.data.teachersNum,
                         teachersAll:res.data.data.teachers_all
                     })
                 })
