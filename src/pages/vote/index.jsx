@@ -5,6 +5,7 @@ const Vote=(()=>{
         <div>
             <Header></Header>
             <Form></Form>
+            
         </div>
     )
 })

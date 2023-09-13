@@ -1,15 +1,62 @@
 import React from "react"
 import styles from './totalcount.module.css'
-var count = {
-    total: 10,
-    now: 5
+import { Component } from 'react';
+import axios from "axios";
+class Totalcount extends Component{
+state={
+    teachersNum:'2',
+    teachersAll:'10'
 }
-const Totalcount = (() => {
+
+componentDidMount(){
+    axios({
+        method:'post',//请求方式
+        url:'http://43.140.197.15:8080/admin/getVoteResult',//请求地址
+        params:'',//和url一起发送的数据（如get请求）
+        data:'',//必要参数，
+        // 自定义请求头
+        }).then(
+        res=>{
+             if(res.data.msg == 'success'){
+             }
+             else{
+                console.log('failed')
+             }
+             console.log(res)
+            this.setState({
+                teachersNum:res.data.data.teachers_all-res.data.data.teachersNum,
+                teachersAll:res.data.data.teachers_all
+            })
+            console.log(this.state.teachersNum)
+        })
+        setInterval(() => {
+            axios({
+                method:'post',//请求方式
+                url:'http://43.140.197.15:8080/admin/getVoteResult',//请求地址
+                params:'',//和url一起发送的数据（如get请求）
+                data:'',//必要参数，
+                // 自定义请求头
+                }).then(
+                res=>{
+                     if(res.data.msg == 'success'){
+                     }
+                     else{
+                        console.log('failed')
+                     }
+                    this.setState({
+                        teachersNum:res.data.data.teachers_all-res.data.data.teachersNum,
+                        teachersAll:res.data.data.teachers_all
+                    })
+                })
+        }, 5000);
+}
+render(){
     return (
         <div>
-            <div className={styles.total}>当 前 投 票 人 数 :{'\u00A0\u00A0\u00A0'}<span className={styles.count}> {count.now} / {count.total}</span></div>
+            <div className={styles.total}>当 前 投 票 人 数 :{'\u00A0\u00A0\u00A0'}<span className={styles.count}> {this.state.teachersNum} / {this.state.teachersAll}</span></div>
         </div>
 
     )
-})
+}
+}
 export default Totalcount

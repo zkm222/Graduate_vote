@@ -1,15 +1,13 @@
 .submitContainer {
-    width: 20%;
+    width: 15%;
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    margin-top: 30px;
+    right: 260px;
     /* top: 50px; */
 }
 
 .submit {
     font-size: larger;
     font-weight: 900;
-    background-color: #0464a9;
+    background-color: rgba(9, 50, 101, 0.916);
     margin-bottom: 40px;
 }
