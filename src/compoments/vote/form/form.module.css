@@ -62,10 +62,11 @@ input[type=checkbox]:checked::after {
 }
 .form{
     padding: 460px;
-    background-image: url(../public/photo/mark.png);
+    background-image: url(/photo/mark.png);
     background-repeat: no-repeat;
-    background-position: 50% 600px;
+    background-position: 50% 550px;
     background-size: 550px;
+    overflow: visible;
 }
 tr:nth-child(even) {
     background-color: #ffffff00;
@@ -84,13 +85,15 @@ tr:hover {
 }
 
 th {
-    background-color: rgba(9, 50, 101, 0.916);
+    background-color: rgba(9, 50, 101, 1);
     height: 50px;
     font-weight: bold;
     color: #fff;
 }
 .tablehead{
-    position: relative;
+    position: sticky;
+    top: 86px;
+    z-index: 99;
 }
 .needtitle{
     font-size: large;

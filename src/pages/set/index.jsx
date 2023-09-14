@@ -1,6 +1,7 @@
 import Header from "../../compoments/vote/header"
 import axios from "axios";
 import { Component,useState} from 'react';
+import styles from './set.module.css'
 import { Routes, Route, Link ,useParams,useLocation,useNavigate} from "react-router-dom";
 const Set = (() => {
     var state={
@@ -41,10 +42,13 @@ const Set = (() => {
       return (
         <div>
         <Header></Header>
-        <h3>每人限投：<input type="text" name="limit" onChange={handleForm}/>
+        <div className={styles.main}>
+          <h3>每人限投：<input type="text" name="limit" onChange={handleForm}/>
         学生人数: <input type="text" name="students" onChange={handleForm}/>
         教师人数: <input type="text" name="teachers" onChange={handleForm}/>
         <button onClick={set_message}>提交</button></h3>
+        </div>
+        
     </div>
     );
 })

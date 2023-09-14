@@ -56,7 +56,7 @@ class Result extends Component{
         return (
             <div className={styles.result}>
                 <table>
-                    <tr>
+                    <tr className={styles.tablehead}>
                         {/* <th>选择再次投票</th> */}
                         <th style={{ WebkitBorderTopLeftRadius: 15 }}>排名</th>
                         <th>学院</th>

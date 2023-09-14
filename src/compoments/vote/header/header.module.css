@@ -22,6 +22,7 @@
     font-weight: bold;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     position: fixed;
-    left: calc(5% + 310px);
+    left: calc(5% + 260px);
     top: -8px;
+    min-width: 400px;
 }
