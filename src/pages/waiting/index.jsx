@@ -2,6 +2,7 @@ import Header from "../../compoments/vote/header"
 import axios from "axios";
 import { Component } from 'react';
 import { Routes, Route, Link ,useParams,useLocation,useNavigate} from "react-router-dom";
+import styles from './waiting.module.css'
 const Waiting= (()=>{
     const navigate=useNavigate()
         axios({
@@ -38,7 +39,7 @@ const Waiting= (()=>{
         return (
             <div>
             <Header></Header>
-            <h2 className="wait">投 票 完 成 ， 请 耐 心 等 待 投 票 结 果{'\u00A0\u00A0\u00A0'}.{'\u00A0\u00A0\u00A0'}.{'\u00A0\u00A0\u00A0'}. </h2>
+            <h2 className={styles.waiting}>投 票 完 成 ， 请 耐 心 等 待 投 票 结 果{'\u00A0\u00A0\u00A0'}.{'\u00A0\u00A0\u00A0'}.{'\u00A0\u00A0\u00A0'}. </h2>
         </div>
         );
 })
