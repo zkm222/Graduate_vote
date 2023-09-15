@@ -10,7 +10,7 @@ const Submit = ((props) => {
             if(confirm(`一共可以投${props.limit},当前已投${props.check},是否提交`)==true){
                 axios({
                 method:'post',//请求方式
-                url:'http://43.140.197.15:8080/vote',//请求地址
+                url:'http://localhost:8081/vote',//请求地址
                 params:'',//和url一起发送的数据（如get请求）
                 data:props.list,//必要参数，
                 // 自定义请求头
@@ -26,7 +26,7 @@ const Submit = ((props) => {
             if(confirm("请检查当前投票结果，是否提交？")==true){
                 axios({
                 method:'post',//请求方式
-                url:'http://43.140.197.15:8080/vote',//请求地址
+                url:'http://localhost:8081/vote',//请求地址
                 params:'',//和url一起发送的数据（如get请求）
                 data:props.list,//必要参数，
                 // 自定义请求头
