@@ -7,7 +7,7 @@ const Submit = ((props) => {
     const navigate=useNavigate()
     const sentResult=()=>{
         if(props.check!=props.limit){
-            if(confirm(`一共可以投${props.limit},当前已投${props.check},是否提交`)==true){
+            if(confirm(`当前已投${props.check}票,是否确定提交？`)==true){
                 axios({
                 method:'post',//请求方式
                 url:'http://localhost:8081/vote',//请求地址
@@ -23,7 +23,7 @@ const Submit = ((props) => {
             }
         }
         else{
-            if(confirm("请检查当前投票结果，是否提交？")==true){
+            if(confirm(`当前已投${props.check}票,是否确定提交？`)==true){
                 axios({
                 method:'post',//请求方式
                 url:'http://localhost:8081/vote',//请求地址

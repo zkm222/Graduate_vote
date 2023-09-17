@@ -73,7 +73,7 @@ class Form extends Component {
       <div className={styles.form}>
         {/* <h1 className={styles.toptitle}>候 选 人 名 单</h1> */}
         {/* <div className={styles.limit}>每人限投 <span className={styles.limitmark}>{checkLimit}</span> 票</div> */}
-        <div  className={styles.need}>
+        {/* <div  className={styles.need}>
           <span className={styles.needtitle}>招募条件:</span>
           <p>
               1．具有我校学籍的全日制应届本科毕业生，并且不属于公费师范生以及定向、委托培养等招生时明确规定不得报考研究生的情形。申请研究生支教团的不可兼报校内外研究生推免和其他专项计划类推免。<br />
@@ -85,7 +85,7 @@ class Form extends Component {
               5．身心健康，能胜任西部地区基础教育志愿服务工作。<br />
               6．中共党员（含预备党员），获得中小学教师资格证或已报名参加2022年下半年中小学教师资格考试者，积极参加志愿服务、有志愿服务经历者，同等条件下可优先考虑。<br />
               7．其他相关事宜按照《东北师范大学推荐优秀应届本科毕业生免试攻读硕士学位研究生工作实施办法（修订）》执行。</p>
-        </div>
+        </div> */}
         {/* 表头 */}
         <table>
               <tr className={styles.tablehead}>
@@ -95,7 +95,7 @@ class Form extends Component {
                 <th>性别</th>
                 <th>政治面貌</th>
                 <th>学院排序</th>
-                <th>面试排序</th>
+                <th>面试顺序</th>
                 <th style={{ WebkitBorderTopRightRadius: 15 }}>是否同意</th>
              </tr>
           

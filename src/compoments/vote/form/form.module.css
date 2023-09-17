@@ -52,7 +52,7 @@ input[type=checkbox]:checked::after {
     max-width: 900px;
     border-collapse: collapse;
     position: absolute;
-    top: 470px;
+    top: 120px;
     left: 50%;
     bottom: 50%;
     transform: translateX(-50%);
