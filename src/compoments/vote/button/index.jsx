@@ -10,7 +10,7 @@ const Submit = ((props) => {
     const visibleTrigger = () => {
         setVisible(true);
     }
-    const visibleCancel=()=>{
+    const visibleCancel = () => {
         setVisible(false);
     }
     const sentResult = () => {
@@ -66,7 +66,7 @@ const Submit = ((props) => {
                 okText="确定"
                 cancelText="取消"
             >
-                <p>当前已投{props.check}票,是否确定提交？</p>
+                <p>当前已投 {props.check} 票,是否确定提交？</p>
             </Modal>
         </div>
 

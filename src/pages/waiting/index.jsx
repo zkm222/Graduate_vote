@@ -29,7 +29,7 @@ const Waiting= (()=>{
                 }).then(
                 res=>{
                     console.log(res.data.data)
-                    if(res.data.data.isRevote!=0&&res.data.data.teachersNum==0){
+                        if (res.data.data.isRevote != 0 && (res.data.data.teachersNum == 0||res.data.data.teachersNum==res.data.data.teachers_all)){
                         console.log("qwq")
                         navigate("/vote",{replace:true})
                     }
