@@ -7,54 +7,54 @@ import { Component } from 'react';
 
 // var student = []
 
-class Result extends Component{
-    state={
-         student:[
-            {voteId: 2, voteName: 'lisi', voteGender: 0, votePoli: 'test', voteInsti: 'test',votePoll:5,voteInstiSort:'1',voteInterSort:'2'}
+class Result extends Component {
+    state = {
+        student: [
+            { voteId: 2, voteName: 'lisi', voteGender: 0, votePoli: 'test', voteInsti: 'test', votePoll: 5, voteInstiSort: '1', voteInterSort: '2' }
         ],
-        pre:[]
+        pre: []
     }
-    componentDidMount(){
+    componentDidMount() {
         axios({
-            method:'post',//请求方式
-            url:'http://43.140.197.15:8080/admin/getVoteResult',//请求地址
-            params:'',//和url一起发送的数据（如get请求）
-            data:'',//必要参数，
+            method: 'post',//请求方式
+            url: 'http://43.140.197.15:8080/admin/getVoteResult',//请求地址
+            params: '',//和url一起发送的数据（如get请求）
+            data: '',//必要参数，
             // 自定义请求头
-            }).then(
-            res=>{
-                 if(res.data.msg == 'success'){
-                 }
-                 else{
+        }).then(
+            res => {
+                if (res.data.msg == 'success') {
+                }
+                else {
                     console.log('failed')
-                 }
+                }
                 this.setState({
-                    student:res.data.data.students,
-                    pre:res.data.data.pre
+                    student: res.data.data.students,
+                    pre: res.data.data.pre == null ? [] : res.data.data.pre
                 })
             })
         setInterval(() => {
             axios({
-                method:'post',//请求方式
-                url:'http://43.140.197.15:8080/admin/getVoteResult',//请求地址
-                params:'',//和url一起发送的数据（如get请求）
-                data:'',//必要参数，
+                method: 'post',//请求方式
+                url: 'http://43.140.197.15:8080/admin/getVoteResult',//请求地址
+                params: '',//和url一起发送的数据（如get请求）
+                data: '',//必要参数，
                 // 自定义请求头
-                }).then(
-                res=>{
-                     if(res.data.msg == 'success'){
-                     }
-                     else{
+            }).then(
+                res => {
+                    if (res.data.msg == 'success') {
+                    }
+                    else {
                         console.log('failed')
-                     }
+                    }
                     this.setState({
-                        student:res.data.data.students,
-                        pre:res.data.data.pre
+                        student: res.data.data.students,
+                        pre: res.data.data.pre == null ? [] : res.data.data.pre
                     })
                 })
         }, 5000);
     }
-    render(){
+    render() {
         var i = 0
         return (
             <div className={styles.result}>
@@ -73,9 +73,9 @@ class Result extends Component{
                     </tr>
                     {this.state.student.map(item => {
                         i++
-                        let sex='男'
-                        if(item.voteGender==0){
-                          sex='女'
+                        let sex = '男'
+                        if (item.voteGender == 0) {
+                            sex = '女'
                         }
                         return (
                             <tr className={styles.student}>
@@ -156,7 +156,7 @@ class Result extends Component{
                     {/* <Revote></Revote> */}
                     <div className={styles.blank}></div>
                 </table>
-                
+
             </div>
         )
     }
