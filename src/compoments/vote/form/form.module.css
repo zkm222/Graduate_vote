@@ -52,7 +52,7 @@ input[type=checkbox]:checked::after {
     max-width: 900px;
     border-collapse: collapse;
     position: absolute;
-    top: 120px;
+    top: 630px;
     left: 50%;
     bottom: 50%;
     transform: translateX(-50%);
@@ -64,7 +64,7 @@ input[type=checkbox]:checked::after {
     padding: 460px;
     background-image: url(/photo/mark.png);
     background-repeat: no-repeat;
-    background-position: 50% 550px;
+    background-position: 50% 700px;
     background-size: 550px;
     overflow: visible;
 }
@@ -97,7 +97,7 @@ th {
     z-index: 99;
 }
 .needtitle{
-    font-size: large;
+    font-size: 1.5em;
     font-weight: 800;
 }
 .need{
@@ -112,6 +112,9 @@ th {
     position:absolute;
     width: 100%;
     height: 100px;
+}
+.foots{
+    font-size: 1.3em;
 }
 #root {
     position: relative;
