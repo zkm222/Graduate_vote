@@ -7,7 +7,7 @@ const Waiting= (()=>{
     const navigate=useNavigate()
         axios({
             method:'post',//请求方式
-            url:'http://localhost:8081/admin/getVoteResult',//请求地址
+            url:'http://210.47.29.53/admin/getVoteResult',//请求地址
             params:'',//和url一起发送的数据（如get请求）
             data:'',//必要参数，
             // 自定义请求头
@@ -22,7 +22,7 @@ const Waiting= (()=>{
         setInterval(() => {
             axios({
                 method:'post',//请求方式
-                url:'http://localhost:8081/admin/getVoteResult',//请求地址
+                url:'http://210.47.29.53/admin/getVoteResult',//请求地址
                 params:'',//和url一起发送的数据（如get请求）
                 data:'',//必要参数，
                 // 自定义请求头

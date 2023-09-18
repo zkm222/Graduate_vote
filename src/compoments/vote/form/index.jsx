@@ -29,7 +29,7 @@ class Form extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:8081/users').then(res => {
+    axios.get('http://210.47.29.53/users').then(res => {
       console.log(res.data.data.revote, "====")
       checkLimit = res.data.data.limit
       console.log(checkLimit)

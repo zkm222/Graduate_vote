@@ -19,7 +19,7 @@ const Submit = ((props) => {
             // if (confirm(`当前已投${props.check}票,是否确定提交？`) == true) {
             axios({
                 method: 'post',//请求方式
-                url: 'http://localhost:8081/vote',//请求地址
+                url: 'http://210.47.29.53/vote',//请求地址
                 params: '',//和url一起发送的数据（如get请求）
                 data: props.list,//必要参数，
                 // 自定义请求头
@@ -35,7 +35,7 @@ const Submit = ((props) => {
             // if (confirm(`当前已投${props.check}票,是否确定提交？`) == true) {
             axios({
                 method: 'post',//请求方式
-                url: 'http://localhost:8081/vote',//请求地址
+                url: 'http://210.47.29.53/vote',//请求地址
                 params: '',//和url一起发送的数据（如get请求）
                 data: props.list,//必要参数，
                 // 自定义请求头
