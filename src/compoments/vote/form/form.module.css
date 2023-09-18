@@ -49,7 +49,6 @@ input[type=checkbox]:checked::after {
 
 .form table {
     width: 80%;
-    max-width: 900px;
     border-collapse: collapse;
     position: absolute;
     top: 630px;
