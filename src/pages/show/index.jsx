@@ -8,6 +8,8 @@ const Show = (() => {
             <Header></Header>
             
             <Result></Result>
+            <Result></Result>
+            <Result></Result>
             <Footresult></Footresult>
         </div>
     )

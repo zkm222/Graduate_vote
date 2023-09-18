@@ -58,6 +58,8 @@ class Result extends Component {
         var i = 0
         return (
             <div className={styles.result}>
+                <h2>第 1 次投票</h2>
+                <p>25-27出现平票，请重新投票</p>
                 <table>
                     <tr className={styles.tablehead}>
                         {/* <th>选择再次投票</th> */}
