@@ -11,7 +11,8 @@ class Result extends Component{
     state={
          student:[
             {voteId: 2, voteName: 'lisi', voteGender: 0, votePoli: 'test', voteInsti: 'test',votePoll:5,voteInstiSort:'1',voteInterSort:'2'}
-        ]
+        ],
+        pre:[]
     }
     componentDidMount(){
         axios({
@@ -28,7 +29,8 @@ class Result extends Component{
                     console.log('failed')
                  }
                 this.setState({
-                    student:res.data.data.students
+                    student:res.data.data.students,
+                    pre:res.data.data.pre
                 })
             })
         setInterval(() => {
@@ -46,7 +48,8 @@ class Result extends Component{
                         console.log('failed')
                      }
                     this.setState({
-                        student:res.data.data.students
+                        student:res.data.data.students,
+                        pre:res.data.data.pre
                     })
                 })
         }, 5000);
@@ -60,6 +63,7 @@ class Result extends Component{
                         {/* <th>选择再次投票</th> */}
                         <th style={{ WebkitBorderTopLeftRadius: 15 }}>排名</th>
                         <th>学院</th>
+                        <th>专业</th>
                         <th>姓名</th>
                         <th>性别</th>
                         <th>政治面貌</th>
@@ -85,6 +89,9 @@ class Result extends Component{
                                     <span className={styles.message}>{item.voteInsti} </span>
                                 </td>
                                 <td>
+                                    <span className={styles.message}>{item.voteMajor} </span>
+                                </td>
+                                <td>
                                     <span className={styles.message}>{item.voteName} </span>
                                 </td>
                                 <td>
@@ -97,7 +104,48 @@ class Result extends Component{
                                     <span className={styles.message}>{item.voteInstiSort} </span>
                                 </td>
                                 <td>
-                                    <span className={styles.message}>{item.voteInterSort} </span>
+                                    <span className={styles.message}>({item.voteInterSort}) </span>
+                                </td>
+                                <td>
+                                    <span className={styles.message}>{item.votePoll} </span>
+                                </td>
+                            </tr>
+                        )
+                    })}
+                    {this.state.pre.map(item => {
+                        i++
+                        let sex = '男'
+                        if (item.voteGender == 0) {
+                            sex = '女'
+                        }
+                        return (
+                            <tr className={styles.student}>
+                                {/* <td>
+                                    <input type='checkbox' name='student' key={item.id} data-id={item.id} />
+                                </td> */}
+                                <td>
+                                    <span className={styles.message}>{i} </span>
+                                </td>
+                                <td>
+                                    <span className={styles.message}>{item.voteInsti} </span>
+                                </td>
+                                <td>
+                                    <span className={styles.message}>{item.voteMajor} </span>
+                                </td>
+                                <td>
+                                    <span className={styles.message}>{item.voteName} </span>
+                                </td>
+                                <td>
+                                    <span className={styles.message}>{sex} </span>
+                                </td>
+                                <td>
+                                    <span className={styles.message}>{item.votePoli} </span>
+                                </td>
+                                <td>
+                                    <span className={styles.message}>{item.voteInstiSort} </span>
+                                </td>
+                                <td>
+                                    <span className={styles.message}>({item.voteInterSort}) </span>
                                 </td>
                                 <td>
                                     <span className={styles.message}>{item.votePoll} </span>
