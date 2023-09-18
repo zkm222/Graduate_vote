@@ -24,12 +24,12 @@ class Form extends Component {
       { "id": "11", "sex": "女", "identity": "预备党员", "name": '赵梓欣', "school": "心理学院" },
       { "id": "12", "sex": "女", "identity": "共青团员", "name": '杨笑雨', "school": "外国语学院" }
     ],
-    btnVisible:false,
-    btnCon:""
+    btnVisible: false,
+    btnCon: ""
   }
 
   componentDidMount() {
-    axios.get('http://localhost:8081/users').then(res => {
+    axios.get('http://210.47.29.53:8081/users').then(res => {
       console.log(res.data.data.revote, "====")
       checkLimit = res.data.data.limit
       console.log(checkLimit)
@@ -41,7 +41,7 @@ class Form extends Component {
     })
   }
 
-  setVisible (data) {
+  setVisible(data) {
     this.setState((state) => {
       return {
         btnVisible: data
@@ -85,10 +85,9 @@ class Form extends Component {
     return (
       <div>
         <div className={styles.form}>
-          <div className={styles.limit}>每人限投 <span className={styles.limitmark}>{checkLimit}</span> 票</div>
-          <div  className={styles.need}>
-          <span className={styles.needtitle}>招募条件:</span>
-          <p className={styles.foots}>
+          <div className={styles.need}>
+            <span className={styles.needtitle}>招募条件:</span>
+            <p className={styles.foots}>
               1．具有我校学籍的全日制应届本科毕业生，并且不属于公费师范生以及定向、委托培养等招生时明确规定不得报考研究生的情形。申请研究生支教团的不可兼报校内外研究生推免和其他专项计划类推免。<br />
               2．具有高尚的爱国主义情操和集体主义精神，理想信念坚定，社会责任感强，诚实守信，学风端正，品行优良，积极向上。在校期间未受任何校纪处分，无任何考试作弊和剽窃他人学术成果记录。<br />
               3．完成截止第三学年（五年制为第四学年）应修的全部必修课程，不及格（重修及格的视为及格）或未修的不具备排名资格。<br />
@@ -98,8 +97,8 @@ class Form extends Component {
               5．身心健康，能胜任西部地区基础教育志愿服务工作。<br />
               6．中共党员（含预备党员），获得中小学教师资格证或已报名参加2022年下半年中小学教师资格考试者，积极参加志愿服务、有志愿服务经历者，同等条件下可优先考虑。<br />
               7．其他相关事宜按照《东北师范大学推荐优秀应届本科毕业生免试攻读硕士学位研究生工作实施办法（修订）》执行。</p>
-        </div>
-        
+          </div>
+
           <table>
             <tr className={styles.tablehead}>
               <th style={{ WebkitBorderTopLeftRadius: 15 }}>序号</th>
