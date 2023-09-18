@@ -142,7 +142,7 @@ class Form extends Component {
                     <span className={styles.message}>{item.voteInstiSort} </span>
                   </td>
                   <td>
-                    <span className={styles.message}>{item.voteInterSort} </span>
+                    <span className={styles.message}>({item.voteInterSort}) </span>
                   </td>
                   <td>
                     <input type='checkbox' name='student' key={item.voteId} onClick={this.checked_num} data-id={item.voteId} />
