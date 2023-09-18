@@ -108,7 +108,7 @@ class Form extends Component {
               <th>性别</th>
               <th>政治面貌</th>
               <th>学院排序</th>
-              <th>面试顺序</th>
+              <th>面试序号</th>
               <th style={{ WebkitBorderTopRightRadius: 15 }}>是否同意</th>
             </tr>
 
