@@ -54,7 +54,7 @@ input[type=checkbox]:checked::after {
     padding: 460px;
     background-image: url(/photo/mark.png);
     background-repeat: no-repeat;
-    background-position: 50% 400px;
+    background-position: 50% 200px;
     background-size: 550px;
     overflow: visible;
 }

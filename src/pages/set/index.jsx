@@ -22,7 +22,7 @@ const Set = (() => {
       }).then(
         res=>{
           console.log(res)
-          navigate("/vote",{replace:true})
+          navigate("/show",{replace:true})
           // this.setState({
           //   data:res.data.data
           // })
