@@ -51,7 +51,7 @@ input[type=checkbox]:checked::after {
     width: 80%;
     border-collapse: collapse;
     position: absolute;
-    top: 630px;
+    top: 780px;
     left: 50%;
     bottom: 50%;
     transform: translateX(-50%);
@@ -59,21 +59,26 @@ input[type=checkbox]:checked::after {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
 }
-.form{
+
+.form {
     padding: 460px;
     background-image: url(/photo/mark.png);
     background-repeat: no-repeat;
-    background-position: 50% 700px;
+    background-position: 50% 300px;
     background-size: 550px;
     overflow: visible;
 }
+
 tr:nth-child(even) {
     background-color: #ffffff00;
 }
+
 tr:nth-child(odd) {
     background-color: rgba(9, 50, 101, 0.111);
 }
-th,td {
+
+th,
+td {
     border: none;
     padding: 10px;
     text-align: center;
@@ -87,34 +92,45 @@ th {
     background-color: rgba(9, 50, 101, 1);
     height: 50px;
     font-weight: bold;
-    font-family:"Microsoft YaHei",微软雅黑,"MicrosoftJhengHei",华文细黑,STHeiti,MingLiu;
+    font-family: "Microsoft YaHei", 微软雅黑, "MicrosoftJhengHei", 华文细黑, STHeiti, MingLiu;
     color: #fff;
 }
-.tablehead{
+
+.tablehead {
     position: sticky;
     top: 86px;
     z-index: 99;
 }
-.needtitle{
+
+.needtitle {
+    display: block;
     font-size: 1.5em;
     font-weight: 800;
+    margin: 10px 0;
 }
-.need{
+
+.need {
     width: 90%;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    top: 120px;
+    top: 100px;
     text-align: left;
 }
-.blank{
-    position:absolute;
+
+.blank {
+    position: absolute;
     width: 100%;
     height: 100px;
 }
-.foots{
+
+.foots {
     font-size: 1.3em;
+    text-indent: 2em;
+    padding: 0;
+    margin: 5px;
 }
+
 #root {
     position: relative;
     top: 0;
