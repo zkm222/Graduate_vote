@@ -1,0 +1,13 @@
+.end{
+    position: relative;
+    top: 350px;
+}
+.button{
+    position: relative;
+    top: 400px;
+    font-size: larger;
+    font-weight: 900;
+    background-color: rgba(9, 50, 101, 0.916);
+    margin-bottom: 40px;
+    color: white;
+}
