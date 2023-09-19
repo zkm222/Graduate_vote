@@ -7,7 +7,7 @@ const Waiting = (() => {
     const navigate = useNavigate()
     axios({
         method: 'post',//请求方式
-        url: 'http://localhost:8081/admin/getVoteResult',//请求地址
+        url: 'http://210.47.29.53:8081/admin/getVoteResult',//请求地址
         params: '',//和url一起发送的数据（如get请求）
         data: '',//必要参数，
         // 自定义请求头
@@ -15,6 +15,7 @@ const Waiting = (() => {
         res => {
             // console.log(res.data.data)
             if (res.data.data.pre) {
+                clearInterval(timer);
                 navigate("/end", { replace: true });
             }
             else if (res.data.data.isRevote != 0 && (res.data.data.teachersNum == 0 || res.data.data.teachersNum == res.data.data.teachers_all)) {
@@ -22,10 +23,10 @@ const Waiting = (() => {
                 navigate("/vote", { replace: true });
             }
         })
-    setInterval(() => {
+    var timer = setInterval(() => {
         axios({
             method: 'post',//请求方式
-            url: 'http://localhost:8081/admin/getVoteResult',//请求地址
+            url: 'http://210.47.29.53:8081/admin/getVoteResult',//请求地址
             params: '',//和url一起发送的数据（如get请求）
             data: '',//必要参数，
             // 自定义请求头
@@ -33,6 +34,7 @@ const Waiting = (() => {
             res => {
                 // console.log(res.data.data)
                 if (res.data.data.pre) {
+                    clearInterval(timer);
                     navigate("/end", { replace: true });
                 }
                 else if (res.data.data.isRevote != 0 && (res.data.data.teachersNum == 0 || res.data.data.teachersNum == res.data.data.teachers_all)) {
