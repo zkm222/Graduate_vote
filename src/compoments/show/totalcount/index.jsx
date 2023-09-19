@@ -3,7 +3,9 @@ import styles from './totalcount.module.css'
 import { Component } from 'react';
 import axios from "axios";
 
+// 接收当前投票人数
 class Totalcount extends Component {
+
     state = {
         teachersNum: '2',
         teachersAll: '10'
@@ -23,13 +25,12 @@ class Totalcount extends Component {
                 else {
                     // console.log('failed')
                 }
-                // console.log(res)
                 this.setState({
                     teachersNum: res.data.data.teachers_all - res.data.data.teachersNum,
                     teachersAll: res.data.data.teachers_all
                 })
-                // console.log(this.state.teachersNum)
             })
+
         setInterval(() => {
             axios({
                 method: 'post',//请求方式
@@ -42,7 +43,7 @@ class Totalcount extends Component {
                     if (res.data.msg == 'success') {
                     }
                     else {
-                        // console.log('failed')
+                        console.log('failed')
                     }
                     this.setState({
                         teachersNum: res.data.data.teachers_all - res.data.data.teachersNum,
@@ -51,6 +52,7 @@ class Totalcount extends Component {
                 })
         }, 5000);
     }
+
     render() {
         return (
             <div>

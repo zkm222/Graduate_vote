@@ -4,6 +4,7 @@ import styles from './button.module.css'
 import axios from "axios"
 import { useNavigate } from "react-router-dom";
 
+// 提交按钮
 const Submit = ((props) => {
     const navigate = useNavigate();
 
@@ -17,8 +18,8 @@ const Submit = ((props) => {
 
     const sentResult = () => {
         setVisible(false);
+        
         if (props.check != props.limit) {
-            // if (confirm(`当前已投${props.check}票,是否确定提交？`) == true) {
             axios({
                 method: 'post',//请求方式
                 url: 'http://210.47.29.53:8081/vote',//请求地址
@@ -31,10 +32,8 @@ const Submit = ((props) => {
                     navigate("/waiting", { replace: true })
                 }
             )
-            // }
         }
         else {
-            // if (confirm(`当前已投${props.check}票,是否确定提交？`) == true) {
             axios({
                 method: 'post',//请求方式
                 url: 'http://210.47.29.53:8081/vote',//请求地址
@@ -47,7 +46,6 @@ const Submit = ((props) => {
                     navigate("/waiting", { replace: true })
                 }
             )
-            // }
         }
     }
 

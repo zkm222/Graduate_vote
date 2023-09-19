@@ -36,6 +36,8 @@ body {
   min-width: 1480px;
   min-height: 100vh;
   content: "";
+  font-family: 'Times New Roman', Times, serif;
+  min-width: 1475px;
 }
 
 h1 {

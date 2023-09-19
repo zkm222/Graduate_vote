@@ -5,7 +5,13 @@
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1)
 }
 
-.result table {
+.userShow {
+    margin-top: 100px;
+    padding-bottom: 60px;
+    overflow: visible;
+}
+
+.userShow table {
     width: 60%;
     border-collapse: collapse;
     position: relative;
@@ -20,35 +26,19 @@
     background-position: center;
 }
 
-.result {
-    margin-top: 100px;
-    padding-bottom: 60px;
-    overflow: visible;
-}
-
-th,
-td {
+.usershow th,
+.usershow td {
     border: none;
     padding: 10px;
     text-align: center;
 }
 
-th {
+.usershow th {
     background-color: rgba(9, 50, 101, 1);
     height: 50px;
     font-weight: bold;
     font-family: "Microsoft YaHei", 微软雅黑, "MicrosoftJhengHei", 华文细黑, STHeiti, MingLiu;
     color: #fff;
-}
-
-#root {
-    position: relative;
-    top: 0;
-}
-
-body {
-    font-family: 'Times New Roman', Times, serif;
-    min-width: 1475px;
 }
 
 .blank {

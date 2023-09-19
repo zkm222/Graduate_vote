@@ -74,7 +74,7 @@ class UserShow extends Component {
     render() {
         var i = 0;
         return (
-            <div className={styles.result}>
+            <div className={styles.userShow}>
                 <Header></Header>
                 <h1>第 26 届研究生支教团选拔结果</h1>
                 <table>

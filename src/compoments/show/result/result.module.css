@@ -1,3 +1,32 @@
+#root {
+    position: relative;
+    top: 0;
+}
+
+.result {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    overflow: visible;
+}
+
+.result table {
+    border-collapse: collapse;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    background-image: url(/photo/mark.png);
+    background-repeat: no-repeat;
+    background-size: 550px;
+    background-position: center;
+}
+
+.tip {
+    color: red;
+}
+
 .student {
     width: 100%;
     height: 50px;
@@ -5,39 +34,14 @@
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1)
 }
 
-.result table {
-    /* width: 80%; */
-    border-collapse: collapse;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    /* border-radius: 15px; */
-    background-image: url(/photo/mark.png);
-    background-repeat: no-repeat;
-    background-size: 550px;
-    background-position: center;
-}
-
-.result {
-    margin-top: 100px;
-    padding-bottom: 60px;
-    overflow: visible;
-}
-
-th,
-td {
+.result th,
+.result td {
     border: none;
     padding: 10px;
     text-align: center;
 }
 
-tr:hover {
-    background-color: #f9f9f9;
-}
-
-th {
+.result th {
     background-color: rgba(9, 50, 101, 1);
     height: 50px;
     font-weight: bold;
@@ -45,27 +49,11 @@ th {
     color: #fff;
 }
 
-#root {
-    position: relative;
-    top: 0;
-}
-
-body {
-    font-family: 'Times New Roman', Times, serif;
-    min-width: 1475px;
-}
-
-.blank {
-    position: absolute;
-    width: 100%;
-    height: 100px;
+.result tr:hover {
+    background-color: #cececefe;
 }
 
 .tablehead {
     position: sticky;
     top: 86px;
-}
-
-.tip {
-    color: red;
 }

@@ -2,6 +2,7 @@ import React from "react";
 import styles from './footer.module.css'
 import Submit from '../button';
 
+// vote 页面票数统计
 const Footer = ((props) => {
     return (
         <div className={styles.bottom}>

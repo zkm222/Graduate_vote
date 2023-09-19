@@ -369,7 +369,6 @@ class Result extends Component {
                             </tr>
                         )
                     })}
-                    <div className={styles.blank}></div>
                 </table>
             </div>
         )

@@ -5,6 +5,7 @@ import Footer from '../footer';
 import Confirm from '../confirm';
 var checkLimit = 3;
 
+// 投票表单
 class Form extends Component {
   state = {
     student_list: [],
@@ -27,6 +28,7 @@ class Form extends Component {
     btnCon: ""
   }
 
+  // 学生获取
   componentDidMount() {
     axios.get('http://210.47.29.53:8081/users').then(res => {
       // console.log(res.data.data.revote, "====")
@@ -42,6 +44,7 @@ class Form extends Component {
     })
   }
 
+  // 通知提示显示设置
   setVisible(data) {
     this.setState((state) => {
       return {
@@ -50,6 +53,7 @@ class Form extends Component {
     })
   }
 
+  // 投票数量修改 & 判断
   checked_num = e => {
     const q = e.target
     if (e.target.checked == false) {
@@ -74,6 +78,7 @@ class Form extends Component {
     }
   }
 
+  // 选中后人数增加
   choose = q => {
     let list = this.state.student_list
     // console.log(this.state.checked_num)
@@ -166,6 +171,7 @@ class Form extends Component {
             <div className={styles.blank}></div>
           </table>
         </div>
+
         <Footer limit={checkLimit} checked={this.state.checked_num} list={this.state.student_list}></Footer>
         <Confirm visible={this.state.btnVisible} fn={this.setVisible.bind(this)} title="系统提示" con="选人到达上限"></Confirm>
       </div>
