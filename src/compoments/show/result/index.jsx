@@ -111,7 +111,7 @@ class Result extends Component {
                     preRevoteResult: res.data.data.preRevoteResult == null ? {} : res.data.data.preRevoteResult,
                     message: `当前第 ${(this.state.determineNum + 1)} 名至第 ${(this.state.determineNum + this.state.student.length)} 名平票，还需选出 ${res.data.data.limit} 名`
                 })
-                all = res.data.data.all == null ? [] : this.data.data.all
+                all = res.data.data.all == null ? [] : res.data.data.all
                 if (res.data.data.pre != null) {
                     this.setState({
                         title: "投票结果",
@@ -142,7 +142,7 @@ class Result extends Component {
                         preRevoteResult: res.data.data.preRevoteResult == null ? {} : res.data.data.preRevoteResult,
                         message: `当前第 ${(this.state.determineNum + 1)} 名至第 ${(this.state.determineNum + this.state.student.length)} 名平票，还需选出 ${res.data.data.limit} 名`
                     })
-                    all = res.data.data.all == null ? [] : this.data.data.all
+                    all = res.data.data.all == null ? [] : res.data.data.all
                     if (res.data.data.pre != null) {
                         this.setState({
                             title: "投票结果",
