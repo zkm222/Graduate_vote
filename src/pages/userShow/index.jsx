@@ -27,7 +27,7 @@ class UserShow extends Component {
                 if (res.data.msg == 'success') {
                 }
                 else {
-                    console.log('failed')
+                    // console.log('failed')
                 }
                 this.setState({
                     student: res.data.data.students,
@@ -56,7 +56,7 @@ class UserShow extends Component {
                     if (res.data.msg == 'success') {
                     }
                     else {
-                        console.log('failed')
+                        // console.log('failed')
                     }
                     this.setState({
                         student: res.data.data.students,

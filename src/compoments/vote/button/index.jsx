@@ -25,7 +25,7 @@ const Submit = ((props) => {
                 // 自定义请求头
             }).then(
                 res => {
-                    console.log(res)
+                    // console.log(res)
                     navigate("/waiting", { replace: true })
                 }
             )
@@ -41,7 +41,7 @@ const Submit = ((props) => {
                 // 自定义请求头
             }).then(
                 res => {
-                    console.log(res)
+                    // console.log(res)
                     navigate("/waiting", { replace: true })
                 }
             )

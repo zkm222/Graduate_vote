@@ -20,14 +20,14 @@ class Totalcount extends Component {
                 if (res.data.msg == 'success') {
                 }
                 else {
-                    console.log('failed')
+                    // console.log('failed')
                 }
-                console.log(res)
+                // console.log(res)
                 this.setState({
                     teachersNum: res.data.data.teachers_all - res.data.data.teachersNum,
                     teachersAll: res.data.data.teachers_all
                 })
-                console.log(this.state.teachersNum)
+                // console.log(this.state.teachersNum)
             })
         setInterval(() => {
             axios({
@@ -41,7 +41,7 @@ class Totalcount extends Component {
                     if (res.data.msg == 'success') {
                     }
                     else {
-                        console.log('failed')
+                        // console.log('failed')
                     }
                     this.setState({
                         teachersNum: res.data.data.teachers_all - res.data.data.teachersNum,

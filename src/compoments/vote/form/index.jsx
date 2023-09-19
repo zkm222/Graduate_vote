@@ -30,14 +30,16 @@ class Form extends Component {
 
   componentDidMount() {
     axios.get('http://210.47.29.53:8081/users').then(res => {
-      console.log(res.data.data.revote, "====")
+      // console.log(res.data.data.revote, "====")
       checkLimit = res.data.data.limit
-      console.log(checkLimit)
+      // console.log(checkLimit)
       this.setState((state) => {
         return {
           students: res.data.data.students
         }
-      }, () => { console.log(this.state.students) })
+      }, () => {
+        // console.log(this.state.students) 
+      })
     })
   }
 
@@ -52,7 +54,7 @@ class Form extends Component {
   checked_num = e => {
     const q = e.target
     if (e.target.checked == false) {
-      console.log(1)
+      // console.log(1)
       let list = this.state.student_list
       let value = e.target.dataset.id
       list.splice(list.indexOf(value), 1)
@@ -61,7 +63,9 @@ class Form extends Component {
           student_list: list,
           checked_num: state.checked_num - 1
         }
-      }, () => { console.log(this.state.student_list) })
+      }, () => {
+        // console.log(this.state.student_list)
+      })
     } else if (this.state.checked_num >= checkLimit) {
       // alert("选人到达上限")
       this.setVisible(true)
@@ -72,14 +76,16 @@ class Form extends Component {
   }
   choose = q => {
     let list = this.state.student_list
-    console.log(this.state.checked_num)
+    // console.log(this.state.checked_num)
     list.push(q.dataset.id)
     this.setState((state) => {
       return {
         student_list: list,
         checked_num: state.checked_num + 1
       }
-    }, () => { console.log(this.state.student_list) })
+    }, () => {
+      // console.log(this.state.student_list)
+    })
   }
   render() {
     return (

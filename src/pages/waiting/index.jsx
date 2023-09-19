@@ -19,7 +19,7 @@ const Waiting = (() => {
                 navigate("/end", { replace: true });
             }
             else if (res.data.data.isRevote != 0 && (res.data.data.teachersNum == 0 || res.data.data.teachersNum == res.data.data.teachers_all)) {
-                console.log("qwq")
+                // console.log("qwq")
                 navigate("/vote", { replace: true });
             }
         })
@@ -38,7 +38,7 @@ const Waiting = (() => {
                     navigate("/end", { replace: true });
                 }
                 else if (res.data.data.isRevote != 0 && (res.data.data.teachersNum == 0 || res.data.data.teachersNum == res.data.data.teachers_all)) {
-                    console.log("qwq")
+                    // console.log("qwq")
                     navigate("/vote", { replace: true });
                 }
             })
