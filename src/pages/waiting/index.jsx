@@ -13,10 +13,13 @@ const Waiting = (() => {
         // 自定义请求头
     }).then(
         res => {
-            if (res.data.msg == 'success') {
+            // console.log(res.data.data)
+            if (res.data.data.pre) {
+                navigate("/end", { replace: true });
             }
-            else {
-                console.log('failed')
+            else if (res.data.data.isRevote != 0 && (res.data.data.teachersNum == 0 || res.data.data.teachersNum == res.data.data.teachers_all)) {
+                console.log("qwq")
+                navigate("/vote", { replace: true });
             }
         })
     setInterval(() => {
