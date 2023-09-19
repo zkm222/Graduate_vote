@@ -8,7 +8,7 @@ import { Component } from 'react';
 var all = []
 
 function Setall() {
-    if (all.length == 0) {
+    if (all == null || all.length == 0) {
         return;
     }
     else {
@@ -107,11 +107,11 @@ class Result extends Component {
                     student: res.data.data.students,
                     determineNum: res.data.data.determineNum,
                     pre: res.data.data.pre == null ? [] : res.data.data.pre,
-                    revoteResult: res.data.data.revoteResult == null,
-                    preRevoteResult: res.data.data.preRevoteResult == null,
-                    message: `当前第 ${(this.state.determineNum + 1)} 名至第 ${(this.state.determineNum + this.state.student.length)} 名平票，还需选出 ${res.data.data.limit} 名`,
+                    revoteResult: res.data.data.revoteResult == null ? {} : res.data.data.revoteResult,
+                    preRevoteResult: res.data.data.preRevoteResult == null ? {} : res.data.data.preRevoteResult,
+                    message: `当前第 ${(this.state.determineNum + 1)} 名至第 ${(this.state.determineNum + this.state.student.length)} 名平票，还需选出 ${res.data.data.limit} 名`
                 })
-                all = res.data.data.all
+                all = res.data.data.all == null ? [] : this.data.data.all
                 if (res.data.data.pre != null) {
                     this.setState({
                         title: "投票结果",
@@ -142,6 +142,7 @@ class Result extends Component {
                         preRevoteResult: res.data.data.preRevoteResult == null ? {} : res.data.data.preRevoteResult,
                         message: `当前第 ${(this.state.determineNum + 1)} 名至第 ${(this.state.determineNum + this.state.student.length)} 名平票，还需选出 ${res.data.data.limit} 名`
                     })
+                    all = res.data.data.all == null ? [] : this.data.data.all
                     if (res.data.data.pre != null) {
                         this.setState({
                             title: "投票结果",
