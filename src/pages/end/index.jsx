@@ -7,7 +7,7 @@ import styles from './end.module.css'
 const End = (() => {
     const navigate = useNavigate()
     const toShow = () => {
-        navigate('/show', { replace: true })
+        navigate('/usershow', { replace: true })
     }
     return (
         <div>

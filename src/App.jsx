@@ -7,6 +7,7 @@ import Vote from './pages/vote'
 import Waiting from './pages/waiting'
 import Set from './pages/set'
 import End from './pages/end'
+import UserShow from './pages/userShow'
 import { Routes, Route, Link, useParams, useLocation, Navigate } from "react-router-dom"
 function App() {
   return (
@@ -18,6 +19,8 @@ function App() {
         <Route path='/waiting' element={<Waiting />} />
         <Route path='/set' element={<Set />} />
         <Route path='/end' element={<End />} />
+        <Route path='/end' element={<End />} />
+        <Route path='/usershow' element={<UserShow />} />
       </Routes>
     </div>
   )

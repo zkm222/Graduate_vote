@@ -6,7 +6,7 @@
 }
 
 .result table {
-    /* width: 80%; */
+    width: 60%;
     border-collapse: collapse;
     position: relative;
     left: 50%;
@@ -16,6 +16,7 @@
     /* border-radius: 15px; */
     background-image: url(/photo/mark.png);
     background-repeat: no-repeat;
+    background-size: 800px;
     background-position: center;
 }
 
@@ -31,10 +32,6 @@ td {
     border: none;
     padding: 10px;
     text-align: center;
-}
-
-tr:hover {
-    background-color: #f9f9f9;
 }
 
 th {
@@ -64,7 +61,4 @@ body {
 .tablehead {
     position: sticky;
     top: 86px;
-}
-.tip{
-    color: red;
 }

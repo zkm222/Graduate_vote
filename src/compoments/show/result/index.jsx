@@ -39,7 +39,7 @@ class Result extends Component {
                     pre: res.data.data.pre == null ? [] : res.data.data.pre,
                     revoteResult: res.data.data.revoteResult == null ? {} : res.data.data.revoteResult,
                     preRevoteResult: res.data.data.preRevoteResult == null ? {} : res.data.data.preRevoteResult,
-                    message: `正在投票第 ${(this.state.determineNum + 1)} 名至第 ${(this.state.determineNum + this.state.student.length)} 名`
+                    message: `当前第 ${(this.state.determineNum + 1)} 名至第 ${(this.state.determineNum + this.state.student.length)} 名平票，还需选出 ${res.data.data.limit} 名`
                 })
                 if (res.data.data.pre != null) {
                     this.setState({
@@ -69,7 +69,7 @@ class Result extends Component {
                         pre: res.data.data.pre == null ? [] : res.data.data.pre,
                         revoteResult: res.data.data.revoteResult == null ? {} : res.data.data.revoteResult,
                         preRevoteResult: res.data.data.preRevoteResult == null ? {} : res.data.data.preRevoteResult,
-                        message: `正在投票第 ${(this.state.determineNum + 1)} 名至第 ${(this.state.determineNum + this.state.student.length)} 名`
+                        message: `当前第 ${(this.state.determineNum + 1)} 名至第 ${(this.state.determineNum + this.state.student.length)} 名平票，还需选出 ${res.data.data.limit} 名`
                     })
                     if (res.data.data.pre != null) {
                         this.setState({
@@ -210,7 +210,7 @@ class Result extends Component {
                                 {this.state.revoteResult[v].map(item => {
                                     // console.log(item)
                                     i++;
-                                    if (item.votePoll == 0 && i > 10) return;
+                                    // if (item.votePoll == 0 && i > 10) return;
                                     let sex = '男';
                                     if (item.voteGender == 0) {
                                         sex = '女';
@@ -275,7 +275,7 @@ class Result extends Component {
                                 {this.state.preRevoteResult[v].map(item => {
                                     // console.log(item)
                                     i++;
-                                    if (item.votePoll == 0 && i > 10) return;
+                                    // if (item.votePoll == 0 && i > 10) return;
                                     let sex = '男';
                                     if (item.voteGender == 0) {
                                         sex = '女';
