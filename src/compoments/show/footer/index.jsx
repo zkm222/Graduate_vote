@@ -1,6 +1,7 @@
 import React from "react";
 import styles from './footer.module.css'
 import Totalcount from "../totalcount/index"
+
 const Footresult = (() => {
     return (
         <div className={styles.bottom}>
@@ -8,4 +9,5 @@ const Footresult = (() => {
         </div>
     )
 })
+
 export default Footresult

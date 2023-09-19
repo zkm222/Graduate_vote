@@ -3,7 +3,6 @@ import styles from './userShow.module.css'
 import axios from "axios";
 import { Component } from 'react';
 import Header from "../../compoments/vote/header";
-// var student = []
 
 class UserShow extends Component {
     state = {
@@ -15,6 +14,7 @@ class UserShow extends Component {
         preRevoteResult: {},
         determineNum: 0
     }
+
     componentDidMount() {
         axios({
             method: 'post',//请求方式
@@ -44,6 +44,7 @@ class UserShow extends Component {
                 }
                 // console.log(this.state.revoteResult);
             })
+
         setInterval(() => {
             axios({
                 method: 'post',//请求方式
@@ -69,9 +70,9 @@ class UserShow extends Component {
                 })
         }, 5000);
     }
+
     render() {
         var i = 0;
-        var j = 0;
         return (
             <div className={styles.result}>
                 <Header></Header>
@@ -83,17 +84,9 @@ class UserShow extends Component {
                         <th style={{ minWidth: 100, WebkitBorderTopRightRadius: 15 }}>姓名</th>
                     </tr>
                     {this.state.student.map(item => {
-                        i++
-                        // if (item.votePoll == 0 && i > 10) return;
-                        let sex = '男'
-                        if (item.voteGender == 0) {
-                            sex = '女'
-                        }
+                        i++;
                         return (
                             <tr className={styles.student}>
-                                {/* <td>
-                                    <input type='checkbox' name='student' key={item.id} data-id={item.id} />
-                                </td> */}
                                 <td>
                                     <span className={styles.message}>{i} </span>
                                 </td>
@@ -106,17 +99,11 @@ class UserShow extends Component {
                             </tr>
                         )
                     })}
+
                     {this.state.pre.map(item => {
-                        i++
-                        let sex = '男'
-                        if (item.voteGender == 0) {
-                            sex = '女'
-                        }
+                        i++;
                         return (
                             <tr className={styles.student}>
-                                {/* <td>
-                                    <input type='checkbox' name='student' key={item.id} data-id={item.id} />
-                                </td> */}
                                 <td>
                                     <span className={styles.message}>{i} </span>
                                 </td>

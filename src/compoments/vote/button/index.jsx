@@ -2,10 +2,11 @@ import React, { useState } from "react"
 import { Button, Modal } from 'antd'
 import styles from './button.module.css'
 import axios from "axios"
-import { Routes, Route, Link, useParams, useLocation, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Submit = ((props) => {
     const navigate = useNavigate();
+
     const [visible, setVisible] = useState(false);
     const visibleTrigger = () => {
         setVisible(true);
@@ -13,6 +14,7 @@ const Submit = ((props) => {
     const visibleCancel = () => {
         setVisible(false);
     }
+
     const sentResult = () => {
         setVisible(false);
         if (props.check != props.limit) {
@@ -48,6 +50,7 @@ const Submit = ((props) => {
             // }
         }
     }
+
     return (
         <div className={styles.submitContainer}>
             <Button className={styles.submit}
@@ -72,4 +75,5 @@ const Submit = ((props) => {
 
     )
 })
+
 export default Submit

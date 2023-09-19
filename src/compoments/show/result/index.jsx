@@ -1,6 +1,4 @@
 import React from "react"
-import { Checkbox, message } from 'antd'
-import Revote from '../button';
 import styles from './result.module.css'
 import axios from "axios";
 import { Component } from 'react';
@@ -75,8 +73,6 @@ function Setall() {
     }
 }
 
-// var student = []
-
 class Result extends Component {
     state = {
         student: [
@@ -101,7 +97,7 @@ class Result extends Component {
                 if (res.data.msg == 'success') {
                 }
                 else {
-                    // console.log('failed')
+                    console.log('failed')
                 }
                 this.setState({
                     student: res.data.data.students,
@@ -118,7 +114,6 @@ class Result extends Component {
                         message: ""
                     })
                 }
-                // console.log(this.state.revoteResult);
             })
         setInterval(() => {
             axios({
@@ -132,7 +127,7 @@ class Result extends Component {
                     if (res.data.msg == 'success') {
                     }
                     else {
-                        // console.log('failed')
+                        console.log('failed')
                     }
                     this.setState({
                         student: res.data.data.students,
@@ -149,7 +144,6 @@ class Result extends Component {
                             message: ""
                         })
                     }
-                    // console.log(this.state.revoteResult);
                 })
         }, 5000);
     }
@@ -159,12 +153,10 @@ class Result extends Component {
         return (
             <div className={styles.result}>
                 <Setall></Setall>
-                {/* {Object.entries(this.state.revoteResult).forEach(([key, value]) => { */}
+
                 {Object.keys(this.state.revoteResult).map((v, i) => {
-                    // console.log(key, value);
                     i = 0;
                     j++;
-                    // console.log(v)
                     return (
                         <div>
                             <h1 style={{ marginTop: 80 }}>第 {j} 次重投【入围人选】</h1>
@@ -182,9 +174,7 @@ class Result extends Component {
                                     <th style={{ WebkitBorderTopRightRadius: 15 }}>票数</th>
                                 </tr>
                                 {this.state.revoteResult[v].revoteList.map(item => {
-                                    // console.log(item)
                                     i++;
-                                    // if (item.votePoll == 0 && i > 10) return;
                                     let sex = '男';
                                     if (item.voteGender == 0) {
                                         sex = '女';
@@ -227,10 +217,9 @@ class Result extends Component {
                 })}
 
                 {Object.keys(this.state.preRevoteResult).map((v, i) => {
-                    // console.log(key, value);
                     i = 0;
                     j++;
-                    // console.log(v)
+
                     return (
                         <div>
                             <h1 style={{ marginTop: 80 }}>第 {j} 次重投【候补人选】</h1>
@@ -248,9 +237,7 @@ class Result extends Component {
                                     <th style={{ WebkitBorderTopRightRadius: 15 }}>票数</th>
                                 </tr>
                                 {this.state.preRevoteResult[v].revoteList.map(item => {
-                                    // console.log(item)
                                     i++;
-                                    // if (item.votePoll == 0 && i > 10) return;
                                     let sex = '男';
                                     if (item.voteGender == 0) {
                                         sex = '女';
@@ -308,16 +295,12 @@ class Result extends Component {
                     </tr>
                     {this.state.student.map(item => {
                         i++
-                        // if (item.votePoll == 0 && i > 10) return;
                         let sex = '男'
                         if (item.voteGender == 0) {
                             sex = '女'
                         }
                         return (
                             <tr className={styles.student}>
-                                {/* <td>
-                                    <input type='checkbox' name='student' key={item.id} data-id={item.id} />
-                                </td> */}
                                 <td>
                                     <span className={styles.message}>{i} </span>
                                 </td>
@@ -356,9 +339,6 @@ class Result extends Component {
                         }
                         return (
                             <tr className={styles.student}>
-                                {/* <td>
-                                    <input type='checkbox' name='student' key={item.id} data-id={item.id} />
-                                </td> */}
                                 <td>
                                     <span className={styles.message}>{i} </span>
                                 </td>

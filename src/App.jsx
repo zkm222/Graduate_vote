@@ -1,6 +1,3 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import Show from './pages/show'
 import Vote from './pages/vote'
@@ -8,7 +5,8 @@ import Waiting from './pages/waiting'
 import Set from './pages/set'
 import End from './pages/end'
 import UserShow from './pages/userShow'
-import { Routes, Route, Link, useParams, useLocation, Navigate } from "react-router-dom"
+import { Routes, Route, Navigate } from "react-router-dom"
+
 function App() {
   return (
     <div>

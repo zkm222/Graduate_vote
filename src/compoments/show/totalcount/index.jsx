@@ -2,6 +2,7 @@ import React from "react"
 import styles from './totalcount.module.css'
 import { Component } from 'react';
 import axios from "axios";
+
 class Totalcount extends Component {
     state = {
         teachersNum: '2',
@@ -59,4 +60,5 @@ class Totalcount extends Component {
         )
     }
 }
+
 export default Totalcount

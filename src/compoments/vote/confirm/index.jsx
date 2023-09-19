@@ -1,19 +1,19 @@
-import { Button, Modal } from 'antd';
+import { Modal } from 'antd';
 import { useEffect, useState } from 'react';
 
 function Confirm(props) {
     const [visible, setVisible] = useState(false);
-    const triggerConfirm=()=>{
+    const triggerConfirm = () => {
         props.fn(false);
     }
-    const triggerCancel=()=>{
+    const triggerCancel = () => {
         props.fn(false);
     }
-    const modalTitle=props.title;
-    const modalContent=props.con;
-    useEffect(()=>{
+    const modalTitle = props.title;
+    const modalContent = props.con;
+    useEffect(() => {
         setVisible(props.visible);
-    },[props.visible]);
+    }, [props.visible]);
 
     return (
         <Modal

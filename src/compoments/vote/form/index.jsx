@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Drawer } from 'antd'
 import styles from './form.module.css'
 import axios from 'axios'
 import Footer from '../footer';
@@ -74,6 +73,7 @@ class Form extends Component {
       this.choose(q)
     }
   }
+
   choose = q => {
     let list = this.state.student_list
     // console.log(this.state.checked_num)
@@ -87,6 +87,7 @@ class Form extends Component {
       // console.log(this.state.student_list)
     })
   }
+
   render() {
     return (
       <div>
@@ -171,4 +172,5 @@ class Form extends Component {
     );
   }
 }
+
 export default Form

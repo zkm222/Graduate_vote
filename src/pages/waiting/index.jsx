@@ -1,8 +1,8 @@
 import Header from "../../compoments/vote/header"
 import axios from "axios";
-import { Component } from 'react';
-import { Routes, Route, Link, useParams, useLocation, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import styles from './waiting.module.css'
+
 const Waiting = (() => {
     const navigate = useNavigate()
     axios({
@@ -13,7 +13,6 @@ const Waiting = (() => {
         // 自定义请求头
     }).then(
         res => {
-            // console.log(res.data.data)
             if (res.data.data.pre) {
                 clearInterval(timer);
                 navigate("/end", { replace: true });
@@ -23,6 +22,7 @@ const Waiting = (() => {
                 navigate("/vote", { replace: true });
             }
         })
+
     var timer = setInterval(() => {
         axios({
             method: 'post',//请求方式
@@ -32,7 +32,6 @@ const Waiting = (() => {
             // 自定义请求头
         }).then(
             res => {
-                // console.log(res.data.data)
                 if (res.data.data.pre) {
                     clearInterval(timer);
                     navigate("/end", { replace: true });

@@ -1,4 +1,4 @@
-.total{
+.total {
     position: fixed;
     bottom: 18px;
     left: 740px;
@@ -9,6 +9,6 @@
     min-width: 1480px;
 }
 
-.count{
+.count {
     color: #e04e4e;
 }

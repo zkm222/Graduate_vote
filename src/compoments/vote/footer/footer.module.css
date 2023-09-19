@@ -1,4 +1,4 @@
-.bottom{
+.bottom {
     position: fixed;
     height: 60px;
     bottom: 0%;
@@ -10,6 +10,7 @@
     z-index: 99;
     min-width: 1480px;
 }
+
 .limit {
     position: absolute;
     top: 25px;
@@ -19,7 +20,8 @@
     font-size: 1.2em;
     min-width: 400px;
 }
-.limitmark{
+
+.limitmark {
     color: red;
     font-weight: bold;
 }

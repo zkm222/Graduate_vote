@@ -1,9 +1,8 @@
 import Header from "../../compoments/vote/header"
 import React from "react"
-import axios from "axios";
-import { Component } from 'react';
-import { Routes, Route, Link, useParams, useLocation, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import styles from './end.module.css'
+
 const End = (() => {
     const navigate = useNavigate()
     const toShow = () => {
@@ -17,4 +16,5 @@ const End = (() => {
         </div>
     );
 })
+
 export default End
