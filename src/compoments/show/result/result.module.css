@@ -39,14 +39,14 @@ input[type=checkbox]:checked::after {
 }
 
 .result table {
-    width: 80%;
+    /* width: 80%; */
     border-collapse: collapse;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
     font-size: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 15px;
+    /* border-radius: 15px; */
     background-image: url(/photo/mark.png);
     background-repeat: no-repeat;
     background-position: center;

@@ -6,9 +6,6 @@ const Show = (() => {
     return (
         <div>
             <Header></Header>
-            
-            <Result></Result>
-            <Result></Result>
             <Result></Result>
             <Footresult></Footresult>
         </div>

@@ -28,10 +28,13 @@ const Waiting = (() => {
             // 自定义请求头
         }).then(
             res => {
-                console.log(res.data.data)
-                if (res.data.data.isRevote != 0 && (res.data.data.teachersNum == 0 || res.data.data.teachersNum == res.data.data.teachers_all)) {
+                // console.log(res.data.data)
+                if (res.data.data.pre) {
+                    navigate("/end", { replace: true });
+                }
+                else if (res.data.data.isRevote != 0 && (res.data.data.teachersNum == 0 || res.data.data.teachersNum == res.data.data.teachers_all)) {
                     console.log("qwq")
-                    navigate("/vote", { replace: true })
+                    navigate("/vote", { replace: true });
                 }
             })
     }, 5000);
