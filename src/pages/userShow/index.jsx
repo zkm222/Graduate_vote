@@ -75,7 +75,7 @@ class UserShow extends Component {
         return (
             <div className={styles.result}>
                 <Header></Header>
-                <h1 style={{ fontFamily: "Microsoft YaHei" }}>第26届研究生支教团选拔结果</h1>
+                <h1>第 26 届研究生支教团选拔结果</h1>
                 <table>
                     <tr className={styles.tablehead}>
                         <th style={{ minWidth: 80, WebkitBorderTopLeftRadius: 15 }}>排名</th>
