@@ -41,7 +41,7 @@ input[type=checkbox]:checked::after {
 .result table {
     width: 80%;
     border-collapse: collapse;
-    position: absolute;
+    position: relative;
     left: 50%;
     transform: translateX(-50%);
     font-size: 20px;
@@ -97,4 +97,9 @@ body {
 .tablehead {
     position: sticky;
     top: 86px;
+}
+.tip{
+    /* left: 50%;
+    transform: translateX(-50%); */
+    color: red;
 }

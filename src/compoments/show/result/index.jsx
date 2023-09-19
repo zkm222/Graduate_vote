@@ -58,8 +58,8 @@ class Result extends Component {
         var i = 0
         return (
             <div className={styles.result}>
-                <h2>第 1 次投票</h2>
-                <p>25-27出现平票，请重新投票</p>
+                <h1>第 1 次投票</h1>
+                <h2 className={styles.tip}>本次投票出现从24-26出现平票，需再次投票</h2>
                 <table>
                     <tr className={styles.tablehead}>
                         {/* <th>选择再次投票</th> */}
@@ -158,7 +158,6 @@ class Result extends Component {
                     {/* <Revote></Revote> */}
                     <div className={styles.blank}></div>
                 </table>
-
             </div>
         )
     }
