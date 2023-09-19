@@ -11,7 +11,7 @@ class Totalcount extends Component {
     componentDidMount() {
         axios({
             method: 'post',//请求方式
-            url: 'http://43.140.197.15:8080/admin/getVoteResult',//请求地址
+            url: 'http://localhost:8081/admin/getVoteResult',//请求地址
             params: '',//和url一起发送的数据（如get请求）
             data: '',//必要参数，
             // 自定义请求头
@@ -32,7 +32,7 @@ class Totalcount extends Component {
         setInterval(() => {
             axios({
                 method: 'post',//请求方式
-                url: 'http://43.140.197.15:8080/admin/getVoteResult',//请求地址
+                url: 'http://localhost:8081/admin/getVoteResult',//请求地址
                 params: '',//和url一起发送的数据（如get请求）
                 data: '',//必要参数，
                 // 自定义请求头
