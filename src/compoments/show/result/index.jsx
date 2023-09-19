@@ -8,7 +8,7 @@ import { Component } from 'react';
 var all = []
 
 function Setall() {
-    if (!all) {
+    if (all.length == 0) {
         return;
     }
     else {
