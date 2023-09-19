@@ -15,7 +15,7 @@ class Result extends Component {
         pre: [],
         revoteResult: {},
         preRevoteResult: {},
-        determineNum: 1,
+        determineNum: 0,
         message: "",
         title: "当前投票"
     }
@@ -39,7 +39,7 @@ class Result extends Component {
                     pre: res.data.data.pre == null ? [] : res.data.data.pre,
                     revoteResult: res.data.data.revoteResult == null ? {} : res.data.data.revoteResult,
                     preRevoteResult: res.data.data.preRevoteResult == null ? {} : res.data.data.preRevoteResult,
-                    message: `正在投票第 ${this.state.determineNum} 名至第 ${(this.state.determineNum + this.state.student.length - 1)} 名`
+                    message: `正在投票第 ${(this.state.determineNum + 1)} 名至第 ${(this.state.determineNum + this.state.student.length)} 名`
                 })
                 if (res.data.data.pre != null) {
                     this.setState({
@@ -69,7 +69,7 @@ class Result extends Component {
                         pre: res.data.data.pre == null ? [] : res.data.data.pre,
                         revoteResult: res.data.data.revoteResult == null ? {} : res.data.data.revoteResult,
                         preRevoteResult: res.data.data.preRevoteResult == null ? {} : res.data.data.preRevoteResult,
-                        message: `正在投票第 ${this.state.determineNum} 名至第 ${(this.state.determineNum + this.state.student.length - 1)} 名`
+                        message: `正在投票第 ${(this.state.determineNum + 1)} 名至第 ${(this.state.determineNum + this.state.student.length)} 名`
                     })
                     if (res.data.data.pre != null) {
                         this.setState({
